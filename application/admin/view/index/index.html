@@ -1,0 +1,70 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>后台管理</title>
+    <link rel="stylesheet" href="__STATIC__/admin/css/bootstrap.min.css">
+    <script src="__STATIC__/admin/js/jquery.js"></script>
+    <script src="__STATIC__/admin/js/bootstrap.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">后台首页</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{:url('expert/index')}">登录</a></li>
+                <li><a href="{:url('equipment/index')}">注册</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>产品</th>
+        <th>活动数量</th>
+        <th>总数量</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="active">
+        <td><a href="{:url('equipment/index')}">环境设备</a></td>
+        <td>{$eqnum}</td>
+        <td>{$eqall}</td></tr>
+    <tr class="success">
+        <td><a href="{:url('activity/index')}">活动专区</a></td>
+        <td>{$acnum}</td>
+        <td>{$acall}</td></tr>
+    <tr class="warning">
+        <td><a href="{:url('news/index')}">动态资讯</a></td>
+        <td>{$newsnum}</td>
+        <td>{$newsall}</td></tr>
+    <tr class="danger">
+        <td><a href="{:url('shopping/index')}">项目商城</a></td>
+        <td>{$shopnum}</td>
+        <td>{$shopall}</td></tr>
+    <tr class="danger">
+        <td><a href="{:url('expert/index')}">专家团队</a></td>
+        <td>{$exnum}</td>
+        <td>{$exall}</td></tr>
+    <tr class="danger">
+        <td><a href="{:url('recruit/index')}">人才招聘</a></td>
+        <td>{$renum}</td>
+        <td>{$reall}</td></tr>
+    </tbody>
+</table>
+
+</body>
+</html>

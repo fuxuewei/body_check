@@ -1,0 +1,56 @@
+{include file="public/header"}
+<div class="col-lg-12">
+    <a href="{:url('equipment/index')}">
+        <button type="button" class="btn btn-success">状态概览</button>
+    </a>
+</div>
+<form enctype="multipart/form-data" action="{:url('equipment/add')}" method="post" class="form-horizontal">
+<label for="inputEmail3" class="col-sm-1 control-label">封面图：</label>
+    <div class="col-sm-10">
+        <input type="file" name="userfile"/>
+        <input type="submit" value="上传"/>
+    </div>
+    <div style="color:red;margin-top:10px">{if isset($note)}{$note}{/if}</div>
+</form>
+
+
+<form class="form-horizontal" action="{:url('equipment/save')}" method="post" style="margin-top:10px">
+    <input type="text" value="{if isset($text)}{$text}{/if}" name="img"/>
+    <div class="form-group" style="clear:both">
+        <label for="inputEmail3" class="col-sm-1 control-label">设备名</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputEmail3" name="name" placeholder="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail31" class="col-sm-1 control-label">设备介绍</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputEmail31" name="content" placeholder="text">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-1 control-label">状态</label>
+        <div class="col-sm-10">
+            <label class="radio-inline">
+                <input type="radio" name="status" id="inlineRadio1" value="-1"> 已过期
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="status" id="inlineRadio2" value="0"> 编辑中
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="status" id="inlineRadio3" value="1"> 已完成
+            </label>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-1 col-sm-10">
+            <button type="submit" class="btn btn-default">Sign in</button>
+        </div>
+    </div>
+</form>
+
+</body>
+</html>

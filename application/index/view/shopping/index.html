@@ -1,0 +1,38 @@
+{include file="public/header"}
+
+
+	<!--从底部上升的遮罩效果  开始-->
+    <h2 id="teams-title">SHOPPING MALL</h2>
+	<h2 class="teams-title">体检商城</h2>
+    <img class="ny_tit" src="__STATIC__/index/images/ny_tit.jpg" />
+	<div class="teams">
+		<ul class="teamsbox">
+			{volist name="shoppings" id="vo"}
+				<a href="#.html"><li class="con">
+					<img src="__STATIC__/index/images/services/{$vo.image}" />
+					<div class="txt">
+						<h3>{$vo.package_name}</h3>
+						<p>{$vo.content}</p>
+					</div>
+				</li></a>
+			{/volist}
+		</ul>
+	</div>
+	<!--从底部上升的遮罩效果  结束-->
+
+	<!--图片放大效果伴随蒙版文字出现  结束-->
+	<script type="text/javascript" src="__STATIC__/index/js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="__STATIC__/index/js/index.js"></script>
+
+
+
+<div class="list">
+	<ul>
+    {$shoppings->render()}
+    </ul>
+
+<div class="clear"></div>
+
+</div>
+
+{include file="public/footer"}
